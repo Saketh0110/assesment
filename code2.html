@@ -1,0 +1,445 @@
+<!doctype html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, 
+
+        initial-scale=1, shrink-to-fit=no">
+
+
+
+    <title>Crack-The-Code Game</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+
+            font-family: 'Yeon Sung', cursive;
+
+        }
+
+        body{
+             background: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+
+        input {
+
+            width: 60px;
+            height: 40px;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+        h1{
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <div id="timer" class="timer pt-4 pl-4 text-center" style="color:white;font-size: xx-large;">00:00:00</div>
+    <!-- <center><button class="btn btn-primary btn-sm m-2" onclick="startFunction()">Start Function</button>
+    <button class="btn btn-outline-danger btn-sm m-2" onclick="stopFunction()">Stop Function</button></center> -->
+    <!--Popup Modal -->
+
+    <!-- <div class="points text-center" id="bouns"><i class="fas fa-coin" style="color:aliceblue">Coins :</i><h4 class="bouns" style="color:aliceblue"></h4></div> -->
+
+    <!-- <script>
+       function bonusPoints(){
+           
+        } -->
+       
+    </script>
+
+    <div class="modal fade" id="popup" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger  
+                        font-weight-bold" id="popupLabel">
+                        Crack Code 
+                    </h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <h3 id="result" class="text-center"></h3>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="showLeaderBoard()">Leader Board</button>
+                    <!-- <button class="btn btn-outline-danger bnt-offset" onclick="bonusPoints()">Bonus</button> -->
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Leader baord -->
+
+<div class="modal fade" id="leaderBoard" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="leaderBoardLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="leaderBoardLabel">Leader Board</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Number</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-dark" ><a href="code1.html" style="color:rgb(255, 255, 255);text-decoration: none;">Start Again</a></button>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+<!-- Leader baord js-->
+
+<script>
+    function showLeaderBoard() {
+        $("#leaderBoard").modal('show');
+    }
+</script>
+
+   
+    <!-- Popup Modal -->
+
+    <div class="container my-4">
+        <h1 class="text-center my-4"><i class="fas fa-unlock-alt"></i> Crack The Code</h1>
+
+        <!-- 3 input fields -->
+
+        <div class="text-center">
+            <input type="text" id="b1">
+            <input type="text" id="b2">
+            <input type="text" id="b3">
+            <br />
+
+            <!-- Button to check result -->
+
+            <button class="btn btn-secondary mt-4" onclick="myfunc();">
+                <i class="fas fa-key"></i> Check
+            </button>
+        </div>
+        <hr>
+
+        <!-- Hints starts -->
+
+        <div id="hints" class="row m-auto">
+            <div id="hintOne">
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header card-title">
+                        <h5 class="card-title text-center">
+                            <i class="far fa-lightbulb"></i>
+                            Hint #1
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="h1" class="text-center"></p>
+                        <h5 class="text-center">
+                            One Number is correct and
+                            well placed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hintTwo">
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header card-title">
+                        <h5 class="card-title text-center">
+                            <i class="far fa-lightbulb"></i>
+                            Hint #2
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="h2" class="text-center"></p>
+                        <h5 class="text-center">
+                            One Number is correct but wrong placed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hintThree">
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header card-title">
+                        <h5 class="card-title text-center">
+                            <i class="far fa-lightbulb"></i>
+                            Hint #3
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p id="h3" class="text-center"></p>
+
+                        <h5 class="text-center">
+                            Two numbers are correct but
+                            wrong placed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hintFour">
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header card-title">
+                        <h5 class="card-title text-center">
+                            <i class="far fa-lightbulb"></i>
+                            Hint #4
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+                        <p id="h4" class="text-center"></p>
+                        <h5 class="text-center">
+                            Nothing is Correct
+                        </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hintFive">
+                <div class="card m-4" style="width: 18rem;">
+                    <div class="card-header card-title">
+                        <h5 class="card-title text-center">
+                            <i class="far fa-lightbulb"></i>
+                            Hint #5
+                        </h5>
+                    </div>
+
+                    <div class="card-body">
+
+                        <p id="h5" class="text-center"></p>
+                        <h5 class="text-center">
+
+                            One Number is correct but
+                            wrong placed
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/788fc8cac3.js" crossorigin="anonymous"></script>
+<!-- <script src="code.js"></script> -->
+<script>
+    let timerInterval;
+        let startTime;
+        let elapsedTime = 0;
+        let timerElement = document.getElementById('timer');
+
+        function startTimer() {
+            startTime = new Date().getTime() - elapsedTime;
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+            elapsedTime = new Date().getTime() - startTime;
+        }
+
+        function resetTimer() {
+            clearInterval(timerInterval);
+            elapsedTime = 0;
+            timerElement.innerHTML = '00:00:00';
+        }
+        function updateTimer() {
+            let timeElapsed = new Date().getTime() - startTime;
+            let hours = Math.floor((timeElapsed / (1000 * 60 * 60)) % 24);
+            let minutes = Math.floor((timeElapsed / (1000 * 60)) % 60);
+            let seconds = Math.floor((timeElapsed / 1000) % 60);
+            let formattedTime = formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+            timerElement.innerHTML = formattedTime;
+        }
+        function formatTime(time) {
+            return time < 10 ? '0' + time : time;
+        }
+        window.addEventListener('load', startTimer);
+
+</script>
+
+
+<script>
+    // Number to decide the game digit i.e.  
+        // game work on 2 digit, 3 digit or n 
+        // digit of number. 
+        const digit = 100;
+
+        let num1 = Math.floor(Math.random() * digit);
+        let num2 = Math.floor(Math.random() * digit);
+        let num3 = Math.floor(Math.random() * digit);
+
+        // Hints are generated here onwards. 
+        // Hint 1 
+        let h1_a = Math.floor(Math.random() * digit);
+        let h1_b = Math.floor(Math.random() * digit);
+        let h1_c = num3;
+
+
+        // Hint 2 
+        let h2_a = Math.floor(Math.random() * digit);
+        let h2_b = Math.floor(Math.random() * digit);
+        let h2_c = num2;
+
+
+        //Hint 3 
+        let h3_a = num2;
+        let h3_b = num1;
+        let h3_c = Math.floor(Math.random() * digit);
+
+
+        // Hint 4 
+        let h4_a = Math.floor(Math.random() * digit);
+        let h4_b = Math.floor(Math.random() * digit);
+        let h4_c = Math.floor(Math.random() * digit);
+
+
+        // Hint 5 
+        let h5_a = Math.floor(Math.random() * digit);
+        let h5_b = Math.floor(Math.random() * digit);
+        let h5_c = num1;
+
+        document.getElementById('h1').innerHTML =
+
+            `<input type="text" id="b1" value="${h1_a} 
+
+    " readonly> <input type="text" id="b1" value=" 
+
+    ${h1_b}" readonly> <input type="text" id="b1" 
+
+    value="${h1_c}" readonly>  `;
+
+        document.getElementById('h2').innerHTML =
+
+            `<input type="text" id="b1" value="${h2_a} 
+
+    " readonly> <input type="text" id="b1" 
+
+    value="${h2_b}" readonly> <input type="text" 
+
+    id="b1" value="${h2_c}" readonly>  `;
+
+        document.getElementById('h3').innerHTML =
+
+            `<input type="text" id="b1" value="${h3_a} 
+
+    " readonly> <input type="text" id="b1" 
+
+    value="${h3_b}" readonly> <input type="text" 
+
+    id="b1" value="${h3_c}" readonly>  `;
+
+        document.getElementById('h4').innerHTML =
+
+            `<input type="text" id="b1" value="${h4_a} 
+
+    " readonly> <input type="text" id="b1" 
+
+    value="${h4_b}" readonly> <input type="text" 
+
+    id="b1" value="${h4_c}" readonly>  `;
+
+        document.getElementById('h5').innerHTML =
+
+            `<input type="text" id="b1" value="${h5_a} 
+
+    " readonly> <input type="text" id="b1" 
+
+    value="${h5_b}" readonly> <input type="text" 
+
+    id="b1" value="${h5_c}" readonly>  `;
+
+        function myfunc() {
+            let a = document.getElementById('b1').value;
+
+            let b = document.getElementById('b2').value;
+
+            let c = document.getElementById('b3').value;
+            if (a != '' && b != '' && c != '') {
+
+                if (a == num1 && b == num2 && c == num3) {
+                //     let sum = 0 ;
+                //    let randomSum = sum += Math.floor((Math.random() * 100) + 1) ;
+                //     document.querySelector("h4").innerHTML = randomSum ;
+                    
+                //     console.log("random working")
+
+                    $('#result').html('Hurray!!! you unlocked the door of treasure & Check your bonus');
+
+                    $('#popup').modal('toggle');
+
+                } else {
+
+                    $('#result').html('oops!!! Its a deadend for u!');
+
+                    $('#popup').modal('toggle')
+
+                }
+
+            }
+
+            else {
+
+
+                $('#result').html('Fill all fields.????');
+                $('#popup').modal('toggle');
+
+            }
+
+        }
+</script>
+
+</html>
